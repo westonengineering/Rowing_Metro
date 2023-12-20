@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rowing Metronome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rowing Metronome</h1>
+        <label for="spm">Strokes Per Minute:</label>
+        <input type="number" id="spm" min="10" max="60" step="1" value="30"><br>
+
+        <label for="dutyCycle">Duty Cycle (%):</label>
+        <input type="number" id="dutyCycle" min="10" max="90" step="1" value="50"><br>
+
+        <button id="startStopBtn">Start</button>
+        <canvas id="waveCanvas" width="300" height="100"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
