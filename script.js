@@ -1,15 +1,17 @@
 let metronomeInterval;
 
 document.getElementById("startStopBtn").addEventListener("click", function() {
-    if (metronomeInterval) {
-        clearInterval(metronomeInterval);
-        metronomeInterval = null;
-        this.textContent = 'Start';
-    } else {
+    if (this.textContent === 'Start') {
         let spm = document.getElementById("spm").value;
         let dutyCycle = document.getElementById("dutyCycle").value;
         startMetronome(spm, dutyCycle);
         this.textContent = 'Stop';
+    } else {
+        if (metronomeInterval) {
+            clearInterval(metronomeInterval);
+            metronomeInterval = null;
+        }
+        this.textContent = 'Start';
     }
 });
 
